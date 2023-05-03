@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Image from './components/Image';
 
@@ -7,316 +6,52 @@ function App() {
     let items = [
         {
             "name": "Блины с повидлом",
-            "ingredients": [
-                {
-                    "nameIngredient": "milk",
-                    "weight": 500
-                },
-                {
-                    "nameIngredient": "water",
-                    "weight": 100
-                },
-                {
-                    "nameIngredient": "eggs",
-                    "weight": 100
-                },
-                {
-                    "nameIngredient": "sugar",
-                    "weight": 50
-                },
-                {
-                    "nameIngredient": "salt",
-                    "weight": 20
-                },
-                {
-                    "nameIngredient": "flour",
-                    "weight": 400
-                },
-                {
-                    "nameIngredient": "oil",
-                    "weight": 100
-                },
-                {
-                    "nameIngredient": "jam",
-                    "weight": 200
-                }
-            ],
-            "priceCooking": 0,
-            "priceSale": 300
-        },
-        {
-            "name": "Блины с сыром",
-            "ingredients": [
-                {
-                    "nameIngredient": "milk",
-                    "weight": 500
-                },
-                {
-                    "nameIngredient": "water",
-                    "weight": 100
-                },
-                {
-                    "nameIngredient": "eggs",
-                    "weight": 100
-                },
-                {
-                    "nameIngredient": "sugar",
-                    "weight": 50
-                },
-                {
-                    "nameIngredient": "salt",
-                    "weight": 20
-                },
-                {
-                    "nameIngredient": "flour",
-                    "weight": 400
-                },
-                {
-                    "nameIngredient": "oil",
-                    "weight": 100
-                },
-                {
-                    "nameIngredient": "cheese",
-                    "weight": 300
-                }
-            ],
-            "priceCooking": 0,
-            "priceSale": 400
+            "ingredients": ["молоко", "яйца", "мука", "джем"],
+            "priceSale": 300,
+            "image": "/assets/jam_pancake.jpg"
         },
         {
             "name": "Блины с творогом",
-            "ingredients": [
-                {
-                    "nameIngredient": "milk",
-                    "weight": 500
-                },
-                {
-                    "nameIngredient": "water",
-                    "weight": 100
-                },
-                {
-                    "nameIngredient": "eggs",
-                    "weight": 100
-                },
-                {
-                    "nameIngredient": "sugar",
-                    "weight": 50
-                },
-                {
-                    "nameIngredient": "salt",
-                    "weight": 20
-                },
-                {
-                    "nameIngredient": "flour",
-                    "weight": 400
-                },
-                {
-                    "nameIngredient": "oil",
-                    "weight": 100
-                },
-                {
-                    "nameIngredient": "cottageCheese",
-                    "weight": 300
-                }
-            ],
-            "priceCooking": 0,
-            "priceSale": 450
+            "ingredients": ["молоко", "яйца", "мука", "творог"],
+            "priceSale": 450,
+            "image": "/assets/cottageCheese_pancake.jpg"
         },
         {
             "name": "Блины с мясом",
-            "ingredients": [
-                {
-                    "nameIngredient": "milk",
-                    "weight": 500
-                },
-                {
-                    "nameIngredient": "water",
-                    "weight": 100
-                },
-                {
-                    "nameIngredient": "eggs",
-                    "weight": 100
-                },
-                {
-                    "nameIngredient": "sugar",
-                    "weight": 50
-                },
-                {
-                    "nameIngredient": "salt",
-                    "weight": 20
-                },
-                {
-                    "nameIngredient": "flour",
-                    "weight": 400
-                },
-                {
-                    "nameIngredient": "oil",
-                    "weight": 100
-                },
-                {
-                    "nameIngredient": "meat",
-                    "weight": 300
-                }
-            ],
-            "priceCooking": 0,
-            "priceSale": 600
+            "ingredients": ["молоко", "яйца", "мука", "мясо"],
+            "priceSale": 600,
+            "image": "/assets/meat_pancake.jpg"
         },
         {
             "name": "Блины с лососем",
-            "ingredients": [
-                {
-                    "nameIngredient": "milk",
-                    "weight": 500
-                },
-                {
-                    "nameIngredient": "water",
-                    "weight": 100
-                },
-                {
-                    "nameIngredient": "eggs",
-                    "weight": 100
-                },
-                {
-                    "nameIngredient": "sugar",
-                    "weight": 50
-                },
-                {
-                    "nameIngredient": "salt",
-                    "weight": 20
-                },
-                {
-                    "nameIngredient": "flour",
-                    "weight": 400
-                },
-                {
-                    "nameIngredient": "oil",
-                    "weight": 100
-                },
-                {
-                    "nameIngredient": "salmon",
-                    "weight": 400
-                }
-            ],
-            "priceCooking": 0,
-            "priceSale": 800
+            "ingredients": ["молоко", "яйца", "мука", "лосось"],
+            "priceSale": 800,
+            "image": "/assets/salmon_pancake.jpg"
         },
         {
             "name": "Блины с бананом",
-            "ingredients": [
-                {
-                    "nameIngredient": "milk",
-                    "weight": 500
-                },
-                {
-                    "nameIngredient": "water",
-                    "weight": 100
-                },
-                {
-                    "nameIngredient": "eggs",
-                    "weight": 100
-                },
-                {
-                    "nameIngredient": "sugar",
-                    "weight": 50
-                },
-                {
-                    "nameIngredient": "salt",
-                    "weight": 20
-                },
-                {
-                    "nameIngredient": "flour",
-                    "weight": 400
-                },
-                {
-                    "nameIngredient": "oil",
-                    "weight": 100
-                },
-                {
-                    "nameIngredient": "bananas",
-                    "weight": 200
-                }
-            ],
-            "priceCooking": 0,
-            "priceSale": 350
+            "ingredients": ["молоко", "яйца", "мука", "банан"],
+            "priceSale": 350,
+            "image": "/assets/banana_pancake.jpg"
         },
         {
             "name": "Блины с шоколадом",
-            "ingredients": [
-                {
-                    "nameIngredient": "milk",
-                    "weight": 500
-                },
-                {
-                    "nameIngredient": "water",
-                    "weight": 100
-                },
-                {
-                    "nameIngredient": "eggs",
-                    "weight": 100
-                },
-                {
-                    "nameIngredient": "sugar",
-                    "weight": 50
-                },
-                {
-                    "nameIngredient": "salt",
-                    "weight": 20
-                },
-                {
-                    "nameIngredient": "flour",
-                    "weight": 400
-                },
-                {
-                    "nameIngredient": "oil",
-                    "weight": 100
-                },
-                {
-                    "nameIngredient": "chocolate",
-                    "weight": 200
-                }
-            ],
-            "priceCooking": 0,
-            "priceSale": 400
-        },
-        {
-            "name": "Летний салат",
-            "ingredients": [
-                {
-                    "nameIngredient": "salad",
-                    "weight": 300
-                },
-                {
-                    "nameIngredient": "tomatoes",
-                    "weight": 200
-                },
-                {
-                    "nameIngredient": "cucumber",
-                    "weight": 200
-                },
-                {
-                    "nameIngredient": "onion",
-                    "weight": 50
-                },
-                {
-                    "nameIngredient": "paper",
-                    "weight": 150
-                }
-            ],
-            "priceCooking": 0,
-            "priceSale": 200
+            "ingredients": ["молоко", "яйца", "мука", "горький шоколад"],
+            "priceSale": 400,
+            "image": "/assets/chocolate_pancake.jpg"
         }
     ];
 
 
-  return (
-    <div className="App">
-      <header className="App-header">
-        {items.map((item) => (
-            <Image name={item.name} price={item.priceSale} ingredients={item.ingredients.map(u => u.nameIngredient).join(', ')} />
-        ))}
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <header className="App-header">
+                {items.map((item) => (
+                    <Image image={item.image} name={item.name} price={item.priceSale} ingredients={item.ingredients.join(', ')} />
+                ))}
+            </header>
+        </div>
+    );
 }
 
 export default App;
