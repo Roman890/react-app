@@ -1,0 +1,14 @@
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
+    align-items: flex-start;
+}
+
+.card {
+    background-color: rgb(236, 191, 154);
+    color: rgb(10, 10, 10);
+
+}
+

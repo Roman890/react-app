@@ -1,57 +1,32 @@
+import { useState } from 'react';
 import './App.css';
-import Image from './components/Image';
+import Menu from './components/Menu';
 
 function App() {
 
-    let items = [
-        {
-            "name": "Блины с повидлом",
-            "ingredients": ["молоко", "яйца", "мука", "джем"],
-            "priceSale": 300,
-            "image": "/assets/jam_pancake.jpg"
-        },
-        {
-            "name": "Блины с творогом",
-            "ingredients": ["молоко", "яйца", "мука", "творог"],
-            "priceSale": 450,
-            "image": "/assets/cottageCheese_pancake.jpg"
-        },
-        {
-            "name": "Блины с мясом",
-            "ingredients": ["молоко", "яйца", "мука", "мясо"],
-            "priceSale": 600,
-            "image": "/assets/meat_pancake.jpg"
-        },
-        {
-            "name": "Блины с лососем",
-            "ingredients": ["молоко", "яйца", "мука", "лосось"],
-            "priceSale": 800,
-            "image": "/assets/salmon_pancake.jpg"
-        },
-        {
-            "name": "Блины с бананом",
-            "ingredients": ["молоко", "яйца", "мука", "банан"],
-            "priceSale": 350,
-            "image": "/assets/banana_pancake.jpg"
-        },
-        {
-            "name": "Блины с шоколадом",
-            "ingredients": ["молоко", "яйца", "мука", "горький шоколад"],
-            "priceSale": 400,
-            "image": "/assets/chocolate_pancake.jpg"
-        }
-    ];
+    const [cart, setCart] = useState([])
+
+    const addToCard = item => {
+        setCart([...cart, item])
+    }
 
 
     return (
-        <div className="App">
-            <header className="App-header">
-                {items.map((item) => (
-                    <Image image={item.image} name={item.name} price={item.priceSale} ingredients={item.ingredients.join(', ')} />
-                ))}
-            </header>
-        </div>
+        <div className="App ">
+            <div className="mx-auto my-5 container flex flex-row-reverse text-right">
+                <div>
+                    <div className="p-2 container">
+                        <div className="text-xl font-bold">Корзина</div>
+                        <div>Количество {cart.length} </div>
+                        <div>Сумма {cart.reduce((sum, item) => (sum += item.priceSale), 0)} </div>
+                    </div>
+                </div>
+            </div>
+            <Menu onItemBuy={(item) => addToCard(item)}> </Menu>
+        </div >
     );
-}
+} 
+
+
 
 export default App;
