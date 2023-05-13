@@ -1,32 +1,23 @@
-import { useState } from 'react';
-import './App.css';
-import Menu from './components/Menu';
+import "./App.css";
+//import { useState } from "react";
+import { Outlet } from "react-router-dom";
+import MainMenu from "./components/MainMenu";
 
 function App() {
+    //const [cart, setCart] = useState([]);
 
-    const [cart, setCart] = useState([])
-
-    const addToCard = item => {
-        setCart([...cart, item])
-    }
-
+    //const addToCart = (item) => {
+    //    setCart([...cart, item]);
+    //};
 
     return (
-        <div className="App ">
-            <div className="mx-auto my-5 container flex flex-row-reverse text-right">
-                <div>
-                    <div className="p-2 container">
-                        <div className="text-xl font-bold">Корзина</div>
-                        <div>Количество {cart.length} </div>
-                        <div>Сумма {cart.reduce((sum, item) => (sum += item.priceSale), 0)} </div>
-                    </div>
-                </div>
+        <div>
+            <div className="container mx-auto">
+                <MainMenu />
+                <Outlet></Outlet>
             </div>
-            <Menu onItemBuy={(item) => addToCard(item)}> </Menu>
-        </div >
+        </div>
     );
-} 
-
-
+}
 
 export default App;
